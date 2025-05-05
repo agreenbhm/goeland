@@ -315,9 +315,9 @@ func filterToc(source *goeland.Source, params *filterParams) {
 	content := "<ul>"
 	for _, entry := range source.Entries {
 		if entry.IncludeLink {
-			content += fmt.Sprintf(`<li><a href="%s">%s</a></li>`, entry.URL, entry.Title)
+			content += fmt.Sprintf(`<li style='margin-bottom:16px;'><a href="%s">%s</a></li>`, entry.URL, entry.Title)
 		} else {
-			content += fmt.Sprintf("<li>%s</li>", entry.Title)
+			content += fmt.Sprintf("<li style='margin-bottom:16px;'>%s</li>", entry.Title)
 		}
 	}
 	content += "</ul>"
